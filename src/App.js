@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './styles/base.sass';
+import Blog from './components/blog/Blog';
 function App() {
+  const articles = [
+    { id: 1, title: 'Article one', body: 'Lorem ipsum' },
+    { id: 2, title: 'Article two', body: 'Lorem ipsum 2' },
+    { id: 3, title: 'Article thre', body: 'Lorem ipsum 3' },
+    { id: 4, title: 'Article four', body: 'Lorem ipsum 4' },
+    { id: 5, title: 'Article five', body: 'Lorem ipsum 5' }
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Blog articles={articles} />
     </div>
   );
 }
